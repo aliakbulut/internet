@@ -101,22 +101,27 @@
   
    
   }); 
+  function saniyedurdur () {
+    window.clearInterval(dur);
+  }
   $.sayimiBaslat = function(){
   if(saniye > 1)
   {
   saniye--;
   sayacYeri.text(saniye);
   } 
-  else if (saniye=1) {}
+  else
   {
     alert("DOGRU CEVAP SAYINIZ:" + dcevap + "YANLIŞ CEVAP SAYINIZ:" + ycevap);
+    saniyedurdur();
+    
   return;
   }
   };
    
   sayacYeri.text(saniye);
-  setInterval("$.sayimiBaslat()", 1000);
-  
+  var dur=setInterval("$.sayimiBaslat()", 1000);
+
 
   
   </script>
